@@ -11,7 +11,8 @@ export const fetchTablesSuccess = (tables: Table[]): TableActionTypes => ({
 
 export const fetchTables = () => {
   return async (dispatch: Dispatch, getState: GetState) => {
-    const response = await axios.get(`localhost:4000/tables`);
+    const response = await axios.get(`http://localhost:4000/tables`);
+    console.log(response);
     dispatch(fetchTablesSuccess(response.data));
   };
 };

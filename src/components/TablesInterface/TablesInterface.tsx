@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchTablesSuccess } from "../../store/tables/actions";
+import { fetchTables } from "../../store/tables/actions";
 import { selectTables } from "../../store/tables/selectors";
 
 export default function TablesInterface() {
@@ -10,12 +10,19 @@ export default function TablesInterface() {
   console.log("hi", tables);
 
   useEffect(() => {
-    dispatch(fetchTablesSuccess);
+    dispatch(fetchTables());
   }, []);
 
   return (
     <div>
-      <div className="leftSide"></div>
+      {tables.map((table) => (
+        <div>
+          <h1>{table.id}</h1>
+          <p>{table.position}</p>
+          {table.orders.length > 0 ? "FULL" : "EMPTY"}
+        </div>
+      ))}
+      <div className="leftSide">asdasds</div>
       <div className="rightSide"></div>
       <div className="bar"></div>
     </div>
