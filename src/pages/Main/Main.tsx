@@ -29,6 +29,12 @@ export default function Main() {
           Active Orders
           <p>{orders.length}</p>
         </button>
+        <button
+          className="main-button"
+          onClick={() => (document.location.href = "/menu")}
+        >
+          Menu
+        </button>
         <button className="main-button">Managers View</button>
         <button className="main-button">Options</button>
         <button className="main-button">Log Out</button>
