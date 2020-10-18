@@ -12,7 +12,7 @@ export default function Table() {
   return (
     <div>
       <div className="left-slice">
-        <ListedItems />
+        <ListedItems id={tableId} />
       </div>
       <div className="right-slice">
         <div className="upperDiv">
@@ -27,7 +27,7 @@ export default function Table() {
         </div>
         <div className="lowerDiv">
           <h2>Payment</h2>
-          <p>Pauyment Details</p>
+          <p>Payment Details</p>
           <p>Price</p>
         </div>
       </div>

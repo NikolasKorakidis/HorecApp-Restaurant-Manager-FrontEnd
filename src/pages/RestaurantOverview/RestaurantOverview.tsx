@@ -7,6 +7,7 @@ import "./styles.css";
 export default function TablesInterface() {
   const dispatch = useDispatch();
   const tables = useSelector(selectTables);
+  console.log(tables);
 
   useEffect(() => {
     dispatch(fetchTables());

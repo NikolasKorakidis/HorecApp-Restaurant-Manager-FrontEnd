@@ -8,9 +8,4 @@ export type fetchTableSuccess = {
   payload: Table[];
 };
 
-export type fetchTableFailed = {
-  type: typeof failed_tables;
-  payload: Table[];
-};
-
-export type TableActionTypes = fetchTableSuccess | fetchTableFailed;
+export type TableActionTypes = fetchTableSuccess;
