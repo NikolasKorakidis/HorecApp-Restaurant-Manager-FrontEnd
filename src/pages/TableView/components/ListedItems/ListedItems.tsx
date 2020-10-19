@@ -29,7 +29,9 @@ export default function ListedItems(props: Props) {
         <div key={item.id} style={{ backgroundColor: "lightblue" }}>
           <h3>{item.name}</h3>
           <h4>Price: {item.price}</h4>
-          <h4>Qnt: {}</h4>
+          <button>-</button>
+          <button>+</button>
+          <h4>Qnt: </h4>
           <p>ordered: {moment(item.createdAt).format("h:mm a")}</p>
         </div>
       ))}

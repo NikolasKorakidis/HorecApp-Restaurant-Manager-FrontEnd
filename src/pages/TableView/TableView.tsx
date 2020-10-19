@@ -1,6 +1,8 @@
 import React from "react";
 import { useParams } from "react-router";
+import Categories from "./components/Categories/Categories";
 import ListedItems from "./components/ListedItems/ListedItems";
+import Payment from "./components/Payment/Payment";
 
 interface ParamType {
   tableId: string;
@@ -16,19 +18,10 @@ export default function Table() {
       </div>
       <div className="right-slice">
         <div className="upperDiv">
-          <h2>Categories</h2>
-          <p>category</p>
-          <p>category</p>
-          <p>category</p>
-          <p>category</p>
-          <p>category</p>
-          <p>category</p>
-          <p>category</p>
+          <Categories />
         </div>
         <div className="lowerDiv">
-          <h2>Payment</h2>
-          <p>Payment Details</p>
-          <p>Price</p>
+          <Payment />
         </div>
       </div>
     </div>
