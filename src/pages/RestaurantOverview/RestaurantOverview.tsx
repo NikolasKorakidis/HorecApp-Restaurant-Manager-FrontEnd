@@ -9,8 +9,6 @@ import "./styles.css";
 export default function TablesInterface() {
   const dispatch = useDispatch();
   const tables = useSelector(selectTables);
-  const orders = useSelector(selectOrders);
-  console.log(orders);
 
   useEffect(() => {
     dispatch(fetchTables());
@@ -45,11 +43,7 @@ export default function TablesInterface() {
                 Open Table
               </button>
             ) : (
-              <button
-                onClick={() =>
-                  dispatch(createOrder(orders.length + 1, table.id))
-                }
-              >
+              <button onClick={() => dispatch(createOrder(table.id))}>
                 Create New Order
               </button>
             )}

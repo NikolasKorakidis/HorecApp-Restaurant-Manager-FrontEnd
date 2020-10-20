@@ -10,9 +10,8 @@ interface ParamType {
 
 export default function Table() {
   const { tableId } = useParams<ParamType>();
-  console.log(tableId);
   return (
-    <div>
+    <div className="main-table-div">
       <div className="left-slice">
         <ListedItems id={tableId} />
       </div>
@@ -21,7 +20,7 @@ export default function Table() {
           <Categories />
         </div>
         <div className="lowerDiv">
-          <Payment />
+          <Payment id={tableId} />
         </div>
       </div>
     </div>
