@@ -1,7 +1,8 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchOrders } from "../../store/orders/actions";
+import { deleteOrder, fetchOrders } from "../../store/orders/actions";
 import { selectOrders } from "../../store/orders/selectors";
+import moment from "moment";
 
 export default function ActiveOrders() {
   const orders = useSelector(selectOrders);
@@ -17,6 +18,7 @@ export default function ActiveOrders() {
       <h1>Active Orders</h1>
       {orders?.map((order) => (
         <div key={order.id} style={{ backgroundColor: "lightsalmon" }}>
+          <p>{moment(order.createdAt).format("MMMM Do YYYY, h:mm:ss a")}</p>
           <h3> Details</h3>
           Order Id: {order.id}
           <br></br>
@@ -27,7 +29,9 @@ export default function ActiveOrders() {
               {item.name} Price: {item.price}€
             </div>
           ))}
-          <button onClick={() => alert("Maybe Later?")}>Checkout</button>
+          <button onClick={() => dispatch(deleteOrder(order.id))}>
+            Checkout
+          </button>
         </div>
       ))}
     </div>
