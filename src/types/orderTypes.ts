@@ -22,4 +22,5 @@ export type OrderItems = {
   updatedAt: string;
   itemId: number;
   orderId: number;
+  qnt: number;
 };

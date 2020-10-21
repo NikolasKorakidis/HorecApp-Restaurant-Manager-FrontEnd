@@ -26,7 +26,7 @@ export default function ActiveOrders() {
           <h3> Your order has {order.items.length} Items</h3>
           {order.items.map((item) => (
             <div key={item.id} style={{ backgroundColor: "lightsteelblue" }}>
-              {item.name} Price: {item.price}€
+              {item.name} Price: {item.price}€ Quantity: {}
             </div>
           ))}
           <button onClick={() => dispatch(deleteOrder(order.id))}>

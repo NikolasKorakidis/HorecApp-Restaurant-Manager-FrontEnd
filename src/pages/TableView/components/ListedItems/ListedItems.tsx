@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchOrders } from "../../../../store/orders/actions";
+import { addToOrder, fetchOrders } from "../../../../store/orders/actions";
 import { selectOrders } from "../../../../store/orders/selectors";
 import moment from "moment";
 
@@ -13,10 +13,12 @@ export default function ListedItems(props: Props) {
   const dispatch = useDispatch();
   const orders = useSelector(selectOrders);
   const tableOrder = orders.find((order) => order.tableId === parseInt(id));
+  console.log(tableOrder);
 
   useEffect(() => {
     dispatch(fetchOrders());
   }, []);
+
   return (
     <div>
       <h1>Table {id}</h1>
@@ -30,8 +32,11 @@ export default function ListedItems(props: Props) {
           <h3>{item.name}</h3>
           <h4>Price: {item.price}</h4>
           <button>-</button>
-          <button>+</button>
-          <h4>Qnt: </h4>
+
+          <button onClick={() => dispatch(addToOrder(tableOrder?.id, item.id))}>
+            +
+          </button>
+          <h4>Qnt: {item.orderItems.qnt}</h4>
           <p>ordered: {moment(item.createdAt).format("h:mm a")}</p>
         </div>
       ))}
