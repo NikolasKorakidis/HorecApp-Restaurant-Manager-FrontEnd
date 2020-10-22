@@ -11,7 +11,11 @@ import { createOrder } from "../store/orders/actions";
 
 const useStyles = makeStyles({
   root: {
-    minWidth: 275,
+    minWidth: 150,
+    maxWidth: 250,
+    minHeight: 150,
+    maxHeight: 250,
+    margin: 10,
   },
   bullet: {
     display: "inline-block",
@@ -42,7 +46,7 @@ export default function OutlinedCard(props: Props) {
       style={
         tableOrders.length > 0
           ? { backgroundColor: "pink" }
-          : { backgroundColor: "lightgreen" }
+          : { backgroundColor: "DarkSeaGreen" }
       }
       className={classes.root}
       variant="outlined"
@@ -66,7 +70,7 @@ export default function OutlinedCard(props: Props) {
         {tableOrders.length > 0 ? (
           <Button
             onClick={() => (document.location.href = `/table/${tableId}`)}
-            style={{ backgroundColor: "lightgrey" }}
+            style={{ backgroundColor: "DarkSeaGreen" }}
             size="small"
           >
             Open Table
@@ -74,7 +78,7 @@ export default function OutlinedCard(props: Props) {
         ) : (
           <Button
             onClick={() => dispatch(createOrder(tableId))}
-            style={{ backgroundColor: "lightgrey" }}
+            style={{ backgroundColor: "pink" }}
             size="small"
           >
             Create new Order
