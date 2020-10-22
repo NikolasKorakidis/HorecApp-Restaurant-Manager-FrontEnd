@@ -6,6 +6,7 @@ export const delete_order = "delete_order";
 export const remove_order_from_table = "remove_order_from_table";
 export const add_to_order = "add_to_order";
 export const update_order = "update_order";
+export const remove_from_order = "remove_from_order";
 
 export type fetchOrdersSuccess = {
   type: typeof fetched_orders;
@@ -38,6 +39,14 @@ export type addToOrder = {
   };
 };
 
+export type removeFromOrder = {
+  type: typeof remove_from_order;
+  payload: {
+    orderId: number;
+    itemId: number;
+  };
+};
+
 export type updateOrder = {
   type: typeof update_order;
   payload: number;
@@ -49,4 +58,5 @@ export type OrderActionTypes =
   | deleteOrderSuccess
   | addToOrder
   | removeOrderFromTable
-  | updateOrder;
+  | updateOrder
+  | removeFromOrder;

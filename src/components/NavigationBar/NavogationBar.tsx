@@ -2,13 +2,12 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import BottomNavigation from "@material-ui/core/BottomNavigation";
 import BottomNavigationAction from "@material-ui/core/BottomNavigationAction";
-import FolderIcon from "@material-ui/icons/Folder";
-import LocationOnIcon from "@material-ui/icons/LocationOn";
 import HomeIcon from "@material-ui/icons/Home";
 import EmojiFoodBeverageIcon from "@material-ui/icons/EmojiFoodBeverage";
-import MenuBookIcon from "@material-ui/icons/MenuBook";
 import RestaurantMenuIcon from "@material-ui/icons/RestaurantMenu";
 import ExitToAppIcon from "@material-ui/icons/ExitToApp";
+import RestaurantIcon from "@material-ui/icons/Restaurant";
+import Brightness4Icon from "@material-ui/icons/Brightness4";
 
 const useStyles = makeStyles({
   root: {
@@ -40,6 +39,13 @@ export default function LabelBottomNavigation() {
           icon={<HomeIcon />}
         />
         <BottomNavigationAction
+          onClick={() => (document.location.href = `/restaurant`)}
+          label="Restaurant View"
+          value="restaurantview"
+          icon={<RestaurantIcon />}
+        />
+
+        <BottomNavigationAction
           onClick={() => (document.location.href = `/orders`)}
           label="Active Orders"
           value="activeOrders"
@@ -55,6 +61,12 @@ export default function LabelBottomNavigation() {
           label="Log Out"
           value="logout"
           icon={<ExitToAppIcon />}
+        />
+        <BottomNavigationAction
+          // onClick={() => setIt(!prefersDarkMode)}
+          label="Dark Mode"
+          value="dark"
+          icon={<Brightness4Icon />}
         />
       </BottomNavigation>
     </div>

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { addToOrder } from "../../../../store/orders/actions";
+import { addToOrder, removeFromOrder } from "../../../../store/orders/actions";
 
 interface Props {
   items: Items[];
@@ -30,7 +30,16 @@ export default function Items(props: Props) {
           ? items.map((item) => (
               <div key={item.id} className="itemDiv">
                 <li>
-                  {item.name} price: {item.price} <button>-</button>{" "}
+                  {item.name} price: {item.price}
+                  <button
+                    onClick={() =>
+                      orderId
+                        ? dispatch(removeFromOrder(orderId, item.id))
+                        : null
+                    }
+                  >
+                    -
+                  </button>{" "}
                   <button
                     onClick={() =>
                       orderId ? dispatch(addToOrder(orderId, item.id)) : null

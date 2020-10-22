@@ -6,6 +6,7 @@ import {
   fetched_orders,
   OrderActionTypes,
   post_order,
+  remove_from_order,
   remove_order_from_table,
   update_order,
 } from "./types";
@@ -85,8 +86,29 @@ export const addToOrder = (orderId: number, itemId: number) => {
         itemId,
       }
     );
-    console.log("here", response.data);
     dispatch(addToOrderSuccess(orderId, itemId));
-    dispatch(updateOrder(response.data.orderId));
+    // dispatch(updateOrder(response.data.orderId));
+  };
+};
+
+// Remove From an Order
+export const removeFromOrderSuccess = (
+  orderId: number,
+  itemId: number
+): OrderActionTypes => ({
+  type: remove_from_order,
+  payload: { orderId, itemId },
+});
+
+export const removeFromOrder = (orderId: number, itemId: number) => {
+  return async (dispatch: Dispatch, getState: GetState) => {
+    const response = await axios.patch(
+      `http://localhost:4000/orders/remove/${orderId}`,
+      {
+        itemId,
+      }
+    );
+    dispatch(removeFromOrderSuccess(orderId, itemId));
+    // dispatch(updateOrder(response.data.orderId));
   };
 };

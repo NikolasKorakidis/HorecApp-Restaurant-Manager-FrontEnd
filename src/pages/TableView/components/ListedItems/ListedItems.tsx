@@ -1,6 +1,10 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { addToOrder, fetchOrders } from "../../../../store/orders/actions";
+import {
+  addToOrder,
+  fetchOrders,
+  removeFromOrder,
+} from "../../../../store/orders/actions";
 import { selectOrders } from "../../../../store/orders/selectors";
 import moment from "moment";
 
@@ -31,7 +35,11 @@ export default function ListedItems(props: Props) {
         <div key={item.id} style={{ backgroundColor: "lightblue" }}>
           <h3>{item.name}</h3>
           <h4>Price: {item.price}</h4>
-          <button>-</button>
+          <button
+            onClick={() => dispatch(removeFromOrder(tableOrder?.id, item.id))}
+          >
+            -
+          </button>
 
           <button onClick={() => dispatch(addToOrder(tableOrder?.id, item.id))}>
             +
