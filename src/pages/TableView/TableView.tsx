@@ -5,6 +5,7 @@ import { selectOrders } from "../../store/orders/selectors";
 import Categories from "./components/Categories/Categories";
 import ListedItems from "./components/ListedItems/ListedItems";
 import Payment from "./components/Payment/Payment";
+import "./styles.css";
 
 interface ParamType {
   tableId: string;

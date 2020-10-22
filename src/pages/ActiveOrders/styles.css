@@ -1,0 +1,12 @@
+.categories-main-div {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 100%;
+  align-content: flex-start;
+}
+
+.orders-div {
+  margin: 2%;
+}

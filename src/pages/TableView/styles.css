@@ -1,0 +1,36 @@
+.main-table-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.left-slice {
+  justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 5%;
+  padding: 2%;
+}
+
+.right-slice {
+  justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 5%;
+  padding: 2%;
+}
+
+.lowerDiv {
+  justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 5%;
+  padding: 2%;
+}
+
+.tablesDiv {
+  margin: 5%;
+}
