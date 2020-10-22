@@ -1,3 +1,33 @@
-/* * {
-  background-color: rgb(161, 158, 158);
-} */
+.table-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.leftSideTables {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 5%;
+  padding: 2%;
+}
+
+.rightSideTables {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 5%;
+  padding: 2%;
+}
+
+.barSideTables {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 5%;
+  padding: 2%;
+}
+
+.tablesDiv {
+  margin: 5%;
+}
