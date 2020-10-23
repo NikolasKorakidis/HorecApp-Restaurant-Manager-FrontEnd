@@ -46,7 +46,7 @@ export default function OutlinedCard(props: Props) {
       style={
         tableOrders.length > 0
           ? { backgroundColor: "pink" }
-          : { backgroundColor: "DarkSeaGreen" }
+          : { backgroundColor: "lightgreen" }
       }
       className={classes.root}
       variant="outlined"
@@ -70,7 +70,9 @@ export default function OutlinedCard(props: Props) {
         {tableOrders.length > 0 ? (
           <Button
             onClick={() => (document.location.href = `/table/${tableId}`)}
-            style={{ backgroundColor: "DarkSeaGreen" }}
+            style={{ width: "70%", margin: "0 auto 1rem" }}
+            variant="contained"
+            color="primary"
             size="small"
           >
             Open Table
@@ -78,7 +80,9 @@ export default function OutlinedCard(props: Props) {
         ) : (
           <Button
             onClick={() => dispatch(createOrder(tableId))}
-            style={{ backgroundColor: "pink" }}
+            style={{ width: "100%", margin: "0 auto 1rem" }}
+            variant="contained"
+            color="default"
             size="small"
           >
             Create new Order

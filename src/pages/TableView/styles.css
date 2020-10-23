@@ -22,6 +22,15 @@
   padding: 2%;
 }
 
+.upperDiv {
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 5%;
+  padding: 2%;
+}
+
 .lowerDiv {
   justify-content: space-between;
   display: flex;
