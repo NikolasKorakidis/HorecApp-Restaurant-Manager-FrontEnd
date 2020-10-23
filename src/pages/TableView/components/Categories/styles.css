@@ -1,0 +1,8 @@
+.categoryDiv {
+  justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 5%;
+  padding: 2%;
+}

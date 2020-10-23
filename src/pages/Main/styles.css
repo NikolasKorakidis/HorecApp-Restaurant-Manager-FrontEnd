@@ -1,0 +1,17 @@
+.main-h1 {
+  background-color: cornflowerblue;
+}
+
+.main-button {
+  width: 50%;
+  padding-bottom: 10%;
+  margin-bottom: 5%;
+  margin-top: 5%;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}

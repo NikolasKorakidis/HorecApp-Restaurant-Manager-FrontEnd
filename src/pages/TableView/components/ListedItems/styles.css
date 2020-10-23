@@ -1,0 +1,5 @@
+.main-listItems-div {
+  overflow: scroll;
+  height: 500px;
+  border-radius: 1%;
+}
