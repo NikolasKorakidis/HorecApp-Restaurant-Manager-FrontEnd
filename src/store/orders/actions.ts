@@ -78,7 +78,6 @@ export const addToOrder = (orderId: number, itemId: number) => {
       }
     );
     dispatch(addToOrderSuccess(orderId, itemId));
-    // check this out
     const orders = await axios.get(`http://localhost:4000/orders`);
     dispatch(fetchOrdersSuccess(orders.data));
   };
