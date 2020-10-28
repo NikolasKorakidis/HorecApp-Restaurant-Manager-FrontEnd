@@ -14,7 +14,6 @@ import Brightness4Icon from "@material-ui/icons/Brightness4";
 
 function App() {
   const [prefersDarkMode, setIt] = useState(false);
-  // const prefersDarkMode = false;
 
   const theme = React.useMemo(
     () =>
