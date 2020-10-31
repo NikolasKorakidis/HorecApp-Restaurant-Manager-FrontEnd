@@ -5,18 +5,15 @@ import Main from "./pages/Main/Main";
 import RestaurantOverview from "./pages/RestaurantOverview/RestaurantOverview";
 import NavigationBar from "./components/NavigationBar//NavogationBar";
 import UpNavBar from "./components/NavigationBar/UpNavBar";
-
 import Table from "./pages/TableView/TableView";
 import Menu from "./pages/Menu/Menu";
 import ActiveOrders from "./pages/ActiveOrders/ActiveOrders";
-import useMediaQuery from "@material-ui/core/useMediaQuery";
 import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import Brightness4Icon from "@material-ui/icons/Brightness4";
 
 function App() {
   const [prefersDarkMode, setIt] = useState(false);
-  // const prefersDarkMode = false;
 
   const theme = React.useMemo(
     () =>

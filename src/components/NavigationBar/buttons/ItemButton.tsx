@@ -1,12 +1,6 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-
-import {
-  Theme,
-  createStyles,
-  makeStyles,
-  useTheme,
-} from "@material-ui/core/styles";
+import { Theme, createStyles, makeStyles } from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
@@ -59,10 +53,9 @@ interface Props {
 }
 
 export default function MediaControlCard(props: Props) {
-  const { id, name, tableId, price, picture, orderItems } = props;
+  const { id, name, tableId, picture, orderItems } = props;
   console.log("It's here", tableId, id);
   const classes = useStyles();
-  const theme = useTheme();
   const dispatch = useDispatch();
 
   return (

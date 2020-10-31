@@ -15,17 +15,23 @@ export default function Menu() {
     <div>
       <h1>Menu</h1>
       {categories?.map((category) => (
-        <div key={category.id}>
-          <h2>{category.name}</h2>
-          <ul>
-            {category.items.map((item) => (
-              <div key={item.id}>
-                <li>
-                  {item.name} price: {item.price}
-                </li>
-              </div>
-            ))}
-          </ul>
+        <div className="menu-main-div">
+          <div key={category.id}>
+            <h2>{category.name}</h2>
+            <ul>
+              {category.items.map((item) => (
+                <div key={item.id}>
+                  <h3>
+                    {item.name} price: {item.price}
+                  </h3>
+                  <img
+                    style={{ width: "10%", height: "10%" }}
+                    src={item.picture}
+                  ></img>
+                </div>
+              ))}
+            </ul>
+          </div>
         </div>
       ))}
     </div>

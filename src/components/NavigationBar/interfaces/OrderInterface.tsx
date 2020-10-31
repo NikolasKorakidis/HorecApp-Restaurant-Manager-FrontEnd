@@ -19,7 +19,6 @@ import TableWithItems from "../../TableWithItems";
 import moment from "moment";
 import { useDispatch } from "react-redux";
 import { deleteOrder } from "../../../store/orders/actions";
-import ConfirmPayment from "../../ConfirmPayment";
 
 interface Props {
   createdAt: string;
@@ -55,7 +54,7 @@ const useStyles = makeStyles((theme: Theme) =>
 );
 
 export default function RecipeReviewCard(props: Props) {
-  const { createdAt, id, items, tableId, updatedAt } = props;
+  const { createdAt, id, items, tableId } = props;
   const classes = useStyles();
   const [expanded, setExpanded] = React.useState(false);
   const dispatch = useDispatch();
@@ -99,7 +98,6 @@ export default function RecipeReviewCard(props: Props) {
         </Collapse>
       </CardContent>
       <CardActions disableSpacing>
-        {/* <ConfirmPayment></ConfirmPayment> */}
         <IconButton
           onClick={() => dispatch(deleteOrder(id))}
           aria-label="paycash"

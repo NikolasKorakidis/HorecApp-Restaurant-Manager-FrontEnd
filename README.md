@@ -1,44 +1,75 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[![Social banner for HorecApp](https://github.com/NikolasKorakidis/HorecApp-Restaurant-Manager-FrontEnd/blob/development/ReadMePictures/HorecAppBanner.png)](nikolaskorakidis.com)
 
-## Available Scripts
+## Welcome to Restaurant Manager Application.
 
-In the project directory, you can run:
+This is an App made as part of my final Project as a Student in Coddaiseur Coding BootCamp.
+This is a project made in 7 days from scratch using no templates or previous code.
 
-### `npm start`
+---
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## The idea behind the HorecApp and RestaurApp.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+The need in the market for an easy to use PoS (Point of Sales) has never been bigger. PoS systems tend to be very complicated to use very User unfriendly and very very expensive.
+I know that from experience and since now i have the tools i took the liberty to start a small revolution by making a new easy to use, friendly and FREE App for small Restaurants and Bars.
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+**Languages and Tools:**
 
-### `npm run build`
+<code><img height="20" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png"></code>
+<code><img height="20" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/typescript/typescript.png"></code>
+<code><img height="20" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/react/react.png"></code>
+<code><img height="20" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/nodejs/nodejs.png"></code>
+<code><img height="20" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/git/git.png"></code>
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+## App Quick OverView
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![App demo](https://github.com/NikolasKorakidis/HorecApp-Restaurant-Manager-FrontEnd/blob/development/ReadMePictures/demo.gif)
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+👀👇 **Click links to see code samples in this project** 👇👀
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- [React-Typescript-Material UI for UI building](https://github.com/NikolasKorakidis/HorecApp-Restaurant-Manager-FrontEnd/blob/main/src/App.tsx) ⭐
+- [Redux-Typescript for state management](https://github.com/NikolasKorakidis/HorecApp-Restaurant-Manager-FrontEnd/tree/main/src/store) ⭐
+- [Authentication](https://github.com/NikolasKorakidis/HorecApp-Restaurant-Manager-BackEnd/tree/master/auth)
+- [Express as web app framework](https://github.com/NikolasKorakidis/HorecApp-Restaurant-Manager-BackEnd/blob/master/index.js)
+  - [REST API](https://github.com/NikolasKorakidis/HorecApp-Restaurant-Manager-BackEnd/tree/master/router)
+- [Sequelize as ORM](https://github.com/NikolasKorakidis/HorecApp-Restaurant-Manager-BackEnd/tree/master/models)
+- [Many-to-many models](https://github.com/NikolasKorakidis/HorecApp-Restaurant-Manager-BackEnd/tree/master/models) ⭐
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+⭐ _New technology learned during this project_
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+---
 
-## Learn More
+## Project Board
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Check the project's state and the future of it [project board](https://github.com/NikolasKorakidis/HorecApp-Restaurant-Manager-FrontEnd/projects)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
+
+## Wireframes
+
+Main Pages
+[![Social banner for WireFrames](https://github.com/NikolasKorakidis/HorecApp-Restaurant-Manager-FrontEnd/blob/development/ReadMePictures/main.png)]()
+
+Table Page
+[![Social banner for WireFrames](https://github.com/NikolasKorakidis/HorecApp-Restaurant-Manager-FrontEnd/blob/development/ReadMePictures/table.png)]()
+
+---
+
+## Backend server repo
+
+The backend side of this project is an Express server using Sequelize. [Click here for more details](https://github.com/NikolasKorakidis/HorecApp-Restaurant-Manager-BackEnd)
+
+## Wrapping it up
+
+**A final overview...:**
+
+- 👨🏽‍💻 I worked endless hours the past week to deliver this project at the currient state. The idea was above and beyond my level of coding at the time i started, but hard work and lot of study delivered a piece of my overal idea which is very presentable and i am very proud of it!
+- 🌱 Typescript gave me a hard time at first but after working around it a lot i realised how powerfull is and totally will be me sidekick for future projects.
+- 💬 Ask me about anything about the project, I am happy to chat with people or even colaborate.
+- 📫 How to reach me: [korakidisn@gmail.com](https://www.linkedin.com/in/nikolas-korakidis-380b791aa/);
+- 📝 That is my : [LinkedIn](https://www.linkedin.com/in/nikolas-korakidis-380b791aa/)

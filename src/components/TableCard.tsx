@@ -39,7 +39,6 @@ export default function OutlinedCard(props: Props) {
   const dispatch = useDispatch();
   const { tableId, tableOrders } = props;
   const classes = useStyles();
-  const bull = <span className={classes.bullet}>•</span>;
 
   return (
     <Card

@@ -1,12 +1,10 @@
 import React, { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { fetchOrders } from "../../store/orders/actions";
-import { selectOrders } from "../../store/orders/selectors";
 import MainInterfaces from "../../components/NavigationBar/interfaces/MainInterfaces";
 import "./styles.css";
 
 export default function Main() {
-  const orders = useSelector(selectOrders);
   const dispatch = useDispatch();
 
   useEffect(() => {
