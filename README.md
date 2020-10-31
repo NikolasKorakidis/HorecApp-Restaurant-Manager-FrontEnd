@@ -1,4 +1,4 @@
-[![Social banner for HorecApp](https://github.com/NikolasKorakidis/NikolasKorakidis/blob/main/images/myGif.gif)](nikolaskorakidis.com)
+[![Social banner for HorecApp](https://github.com/NikolasKorakidis/HorecApp-Restaurant-Manager-FrontEnd/blob/development/ReadMePictures/HorecAppBanner.png)](nikolaskorakidis.com)
 
 ## Welcome to Restaurant Manager Application.
 
@@ -11,8 +11,6 @@ This is a project made in 7 days from scratch using no templates or previous cod
 
 The need in the market for an easy to use PoS (Point of Sales) has never been bigger. PoS systems tend to be very complicated to use very User unfriendly and very very expensive.
 I know that from experience and since now i have the tools i took the liberty to start a small revolution by making a new easy to use, friendly and FREE App for small Restaurants and Bars.
-
-[Have a look here for a Demo of the App](URL NOT HERE YET)
 
 ---
 
@@ -54,8 +52,8 @@ Check the [project board](https://github.com/NikolasKorakidis/HorecApp-Restauran
 
 ## Wireframe
 
-[![Social banner for WireFrames](https://github.com/NikolasKorakidis/NikolasKorakidis/blob/main/images/myGif.gif)]()
-[![Social banner for WireFrames](https://github.com/NikolasKorakidis/NikolasKorakidis/blob/main/images/myGif.gif)]()
+[![Social banner for WireFrames](https://github.com/NikolasKorakidis/HorecApp-Restaurant-Manager-FrontEnd/blob/development/ReadMePictures/main.png)]()
+[![Social banner for WireFrames](https://github.com/NikolasKorakidis/HorecApp-Restaurant-Manager-FrontEnd/blob/development/ReadMePictures/table.png)]()
 
 ---
 
