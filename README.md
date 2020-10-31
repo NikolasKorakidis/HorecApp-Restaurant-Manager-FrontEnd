@@ -24,7 +24,7 @@ I know that from experience and since now i have the tools i took the liberty to
 
 ---
 
-## App quick demo
+## App Quick OverView
 
 ![App demo](https://github.com/NikolasKorakidis/HorecApp-Restaurant-Manager-FrontEnd/blob/development/ReadMePictures/demo.gif)
 
