@@ -24,9 +24,9 @@ I know that from experience and since now i have the tools i took the liberty to
 
 ---
 
-## App demo
+## App quick demo
 
-![App demo](https://github.com/tdijkmans/savoristas-front/blob/master/readme-assets/Post-a-palette.gif)
+![App demo](https://github.com/NikolasKorakidis/HorecApp-Restaurant-Manager-FrontEnd/blob/development/ReadMePictures/demo.gif)
 
 ---
 
@@ -46,13 +46,16 @@ I know that from experience and since now i have the tools i took the liberty to
 
 ## Project Board
 
-Check the [project board](https://github.com/NikolasKorakidis/HorecApp-Restaurant-Manager-FrontEnd/projects)
+Check the project's state and the future of it [project board](https://github.com/NikolasKorakidis/HorecApp-Restaurant-Manager-FrontEnd/projects)
 
 ---
 
 ## Wireframe
 
+Main Pages
 [![Social banner for WireFrames](https://github.com/NikolasKorakidis/HorecApp-Restaurant-Manager-FrontEnd/blob/development/ReadMePictures/main.png)]()
+
+Table Page
 [![Social banner for WireFrames](https://github.com/NikolasKorakidis/HorecApp-Restaurant-Manager-FrontEnd/blob/development/ReadMePictures/table.png)]()
 
 ---
