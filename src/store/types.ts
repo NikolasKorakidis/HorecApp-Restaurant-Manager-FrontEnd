@@ -6,6 +6,7 @@ export type StoreState = {
   tables: Table[];
   orders: Order[];
   categories: Category[];
+  darkmode: string;
 };
 
 export type GetState = () => StoreState;

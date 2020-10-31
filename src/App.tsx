@@ -11,9 +11,14 @@ import ActiveOrders from "./pages/ActiveOrders/ActiveOrders";
 import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import Brightness4Icon from "@material-ui/icons/Brightness4";
+import { useSelector } from "react-redux";
+import { selectMode } from "./store/darkMode/selector";
 
 function App() {
   const [prefersDarkMode, setIt] = useState(false);
+  const mode = useSelector(selectMode);
+  console.log(mode);
+  // Set global state for dark mode and delete the button on top right
 
   const theme = React.useMemo(
     () =>
