@@ -7,20 +7,11 @@ import {
   OrderActionTypes,
   post_order,
   remove_from_order,
-  remove_order_from_table,
   update_order,
 } from "./types";
 import { GetState } from "../types";
 import { Order } from "../../types/orderTypes";
 import { updateTable } from "../tables/actions";
-
-// export const removeOrderFromTable = (
-//   orderId: number,
-//   tableId: number
-// ): OrderActionTypes => ({
-//   type: remove_order_from_table,
-//   payload: { orderId, tableId },
-// });
 
 // Fetch all orders
 export const fetchOrdersSuccess = (orders: Order[]): OrderActionTypes => ({
@@ -87,7 +78,8 @@ export const addToOrder = (orderId: number, itemId: number) => {
       }
     );
     dispatch(addToOrderSuccess(orderId, itemId));
-    // dispatch(updateOrder(response.data.orderId));
+    const orders = await axios.get(`http://localhost:4000/orders`);
+    dispatch(fetchOrdersSuccess(orders.data));
   };
 };
 
@@ -109,6 +101,7 @@ export const removeFromOrder = (orderId: number, itemId: number) => {
       }
     );
     dispatch(removeFromOrderSuccess(orderId, itemId));
-    // dispatch(updateOrder(response.data.orderId));
+    const orders = await axios.get(`http://localhost:4000/orders`);
+    dispatch(fetchOrdersSuccess(orders.data));
   };
 };

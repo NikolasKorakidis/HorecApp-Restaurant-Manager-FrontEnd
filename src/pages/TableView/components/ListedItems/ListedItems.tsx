@@ -1,12 +1,10 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import {
-  addToOrder,
-  fetchOrders,
-  removeFromOrder,
-} from "../../../../store/orders/actions";
+import { fetchOrders } from "../../../../store/orders/actions";
 import { selectOrders } from "../../../../store/orders/selectors";
+import ItemButton from "../../../../components/NavigationBar/buttons/ItemButton";
 import moment from "moment";
+import "./styles.css";
 
 interface Props {
   id: string;
@@ -17,7 +15,7 @@ export default function ListedItems(props: Props) {
   const dispatch = useDispatch();
   const orders = useSelector(selectOrders);
   const tableOrder = orders.find((order) => order.tableId === parseInt(id));
-  console.log(tableOrder);
+  console.log("tableorder", tableOrder);
 
   useEffect(() => {
     dispatch(fetchOrders());
@@ -31,23 +29,20 @@ export default function ListedItems(props: Props) {
         {moment(tableOrder?.createdAt).format("MMMM Do YYYY, h:mm:ss a")}
       </h5>
       <h2>List of Items</h2>
-      {tableOrder?.items.map((item) => (
-        <div key={item.id} style={{ backgroundColor: "lightblue" }}>
-          <h3>{item.name}</h3>
-          <h4>Price: {item.price}</h4>
-          <button
-            onClick={() => dispatch(removeFromOrder(tableOrder?.id, item.id))}
-          >
-            -
-          </button>
-
-          <button onClick={() => dispatch(addToOrder(tableOrder?.id, item.id))}>
-            +
-          </button>
-          <h4>Qnt: {item.orderItems.qnt}</h4>
-          <p>ordered: {moment(item.createdAt).format("h:mm a")}</p>
-        </div>
-      ))}
+      <div className="main-listItems-div">
+        {tableOrder?.items.map((item) => (
+          <div key={item.id} className="listed-item-div">
+            <ItemButton
+              id={item.id}
+              tableId={tableOrder.id}
+              name={item.name}
+              price={item.price}
+              picture={item.picture}
+              orderItems={item.orderItems}
+            />
+          </div>
+        ))}
+      </div>
     </div>
   );
 }

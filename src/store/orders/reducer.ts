@@ -3,7 +3,6 @@ import {
   fetched_orders,
   OrderActionTypes,
   post_order,
-  update_order,
 } from "./types";
 import { Order } from "../../types/orderTypes";
 
@@ -19,16 +18,6 @@ export default (state = initialState, action: OrderActionTypes) => {
       const orderId = action.payload;
       const orders = state.filter((order) => order.id !== orderId);
       return [...orders];
-    // case update_order:
-    //   const updatedTables = state.map((t) => {
-    //     if (orderId === t.id) {
-    //       const updatedOrders = [...t.orders, action.payload];
-    //       return { ...t, orders: updatedOrders };
-    //     } else {
-    //       return t;
-    //     }
-    //   });
-    //   return updatedTables;
     default:
       return state;
   }

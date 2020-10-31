@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchCategories } from "../../../../store/categories/actions";
 import { selectCategories } from "../../../../store/categories/selectors";
+import CategoriesLayout from "../../../../components/CategoriesLayout";
 import Items from "../Items/Items";
 
 interface Props {
@@ -11,7 +12,6 @@ interface Props {
 
 export default function Categories(props: Props) {
   const { id, orderId } = props;
-  console.log("asdasd", id, orderId);
   const categories = useSelector(selectCategories);
   const dispatch = useDispatch();
 
@@ -21,14 +21,9 @@ export default function Categories(props: Props) {
 
   return (
     <div>
-      {categories?.map((category) => (
-        <div className="categoryDiv" key={category.id}>
-          <h2>{category.name}</h2>
-          <ul>
-            <Items items={category.items} id={id} orderId={orderId} />
-          </ul>
-        </div>
-      ))}
+      <h1>Categories</h1>
+      <p>Click to expand</p>
+      <CategoriesLayout orderId={orderId} categories={categories} />
     </div>
   );
 }
