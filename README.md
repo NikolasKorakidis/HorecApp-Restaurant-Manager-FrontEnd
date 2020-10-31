@@ -50,7 +50,7 @@ Check the project's state and the future of it [project board](https://github.co
 
 ---
 
-## Wireframe
+## Wireframes
 
 Main Pages
 [![Social banner for WireFrames](https://github.com/NikolasKorakidis/HorecApp-Restaurant-Manager-FrontEnd/blob/development/ReadMePictures/main.png)]()
@@ -63,3 +63,13 @@ Table Page
 ## Backend server repo
 
 The backend side of this project is an Express server using Sequelize. [Click here for more details](https://github.com/NikolasKorakidis/HorecApp-Restaurant-Manager-BackEnd)
+
+## Wrapping it up
+
+**A final overview...:**
+
+- 👨🏽‍💻 I worked endless hours the past week to deliver this project at the currient state. The idea was above and beyond my level of coding at the time i started, but hard work and lot of study delivered a piece of my overal idea which is very presentable and i am very proud of it!
+- 🌱 Typescript gave me a hard time at first but after working around it a lot i realised how powerfull is and totally will be me sidekick for future projects.
+- 💬 Ask me about anything about the project, I am happy to chat with people or even colaborate.
+- 📫 How to reach me: [korakidisn@gmail.com](https://www.linkedin.com/in/nikolas-korakidis-380b791aa/);
+- 📝 That is my : [LinkedIn](https://www.linkedin.com/in/nikolas-korakidis-380b791aa/)
