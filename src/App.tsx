@@ -15,7 +15,7 @@ import { useSelector } from "react-redux";
 import { selectMode } from "./store/darkMode/selector";
 
 function App() {
-  const [prefersDarkMode, setIt] = useState(false);
+  // const [prefersDarkMode, setIt] = useState(false);
   const mode = useSelector(selectMode);
   console.log(mode);
   // Set global state for dark mode and delete the button on top right
@@ -24,22 +24,22 @@ function App() {
     () =>
       createMuiTheme({
         palette: {
-          type: prefersDarkMode ? "dark" : "light",
+          type: mode ? "dark" : "light",
         },
       }),
-    [prefersDarkMode]
+    [mode]
   );
   return (
     <div className="App">
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <UpNavBar />
-        <button
+        {/* <button
           style={{ float: "right", backgroundColor: "lightyellow" }}
           onClick={() => setIt(!prefersDarkMode)}
         >
           {<Brightness4Icon />}
-        </button>
+        </button> */}
         <Switch>
           <Route strict path="/orders" component={ActiveOrders} />
           <Route strict path="/menu" component={Menu} />
