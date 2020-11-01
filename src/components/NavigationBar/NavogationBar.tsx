@@ -66,7 +66,7 @@ export default function LabelBottomNavigation() {
           icon={<ExitToAppIcon />}
         />
         <BottomNavigationAction
-          onClick={() => dispatch(changeModeAction)}
+          onClick={() => dispatch(changeModeAction())}
           label="Dark Mode"
           value="dark"
           icon={<Brightness4Icon />}
