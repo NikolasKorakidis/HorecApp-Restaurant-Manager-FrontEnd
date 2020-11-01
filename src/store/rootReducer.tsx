@@ -4,6 +4,7 @@ import { combineReducers } from "redux";
 import tables from "./tables/reducer";
 import orders from "./orders/reducer";
 import categories from "./categories/reducer";
+import darkmode from "./darkMode/reducer";
 
 export default combineReducers({
   //   appState,
@@ -11,4 +12,5 @@ export default combineReducers({
   categories,
   orders,
   tables,
+  darkmode,
 });

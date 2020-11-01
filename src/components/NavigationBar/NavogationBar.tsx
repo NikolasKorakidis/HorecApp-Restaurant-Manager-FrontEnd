@@ -8,6 +8,8 @@ import RestaurantMenuIcon from "@material-ui/icons/RestaurantMenu";
 import ExitToAppIcon from "@material-ui/icons/ExitToApp";
 import RestaurantIcon from "@material-ui/icons/Restaurant";
 import Brightness4Icon from "@material-ui/icons/Brightness4";
+import { useDispatch } from "react-redux";
+import { changeModeAction } from "../../store/darkMode/actions";
 
 const useStyles = makeStyles({
   root: {
@@ -20,6 +22,7 @@ const useStyles = makeStyles({
 export default function LabelBottomNavigation() {
   const classes = useStyles();
   const [value, setValue] = React.useState("home");
+  const dispatch = useDispatch();
 
   const handleChange = (event: React.ChangeEvent<{}>, newValue: string) => {
     setValue(newValue);
@@ -63,7 +66,7 @@ export default function LabelBottomNavigation() {
           icon={<ExitToAppIcon />}
         />
         <BottomNavigationAction
-          // onClick={() => setIt(!prefersDarkMode)}
+          onClick={() => dispatch(changeModeAction())}
           label="Dark Mode"
           value="dark"
           icon={<Brightness4Icon />}

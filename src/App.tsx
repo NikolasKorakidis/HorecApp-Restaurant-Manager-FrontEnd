@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./App.css";
 import { Route, Switch } from "react-router-dom";
 import Main from "./pages/Main/Main";
@@ -10,31 +10,26 @@ import Menu from "./pages/Menu/Menu";
 import ActiveOrders from "./pages/ActiveOrders/ActiveOrders";
 import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
 import CssBaseline from "@material-ui/core/CssBaseline";
-import Brightness4Icon from "@material-ui/icons/Brightness4";
+import { useSelector } from "react-redux";
+import { selectMode } from "./store/darkMode/selector";
 
 function App() {
-  const [prefersDarkMode, setIt] = useState(false);
+  const mode = useSelector(selectMode);
 
   const theme = React.useMemo(
     () =>
       createMuiTheme({
         palette: {
-          type: prefersDarkMode ? "dark" : "light",
+          type: mode ? "dark" : "light",
         },
       }),
-    [prefersDarkMode]
+    [mode]
   );
   return (
     <div className="App">
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <UpNavBar />
-        <button
-          style={{ float: "right", backgroundColor: "lightyellow" }}
-          onClick={() => setIt(!prefersDarkMode)}
-        >
-          {<Brightness4Icon />}
-        </button>
         <Switch>
           <Route strict path="/orders" component={ActiveOrders} />
           <Route strict path="/menu" component={Menu} />
