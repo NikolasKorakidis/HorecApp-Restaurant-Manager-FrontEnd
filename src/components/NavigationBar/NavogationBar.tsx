@@ -22,6 +22,9 @@ const useStyles = makeStyles({
 export default function LabelBottomNavigation() {
   const classes = useStyles();
   const [value, setValue] = React.useState("home");
+  localStorage.setItem("value", value);
+  const retrievedValue = localStorage.getItem("value");
+
   const dispatch = useDispatch();
 
   const handleChange = (event: React.ChangeEvent<{}>, newValue: string) => {
@@ -31,7 +34,7 @@ export default function LabelBottomNavigation() {
   return (
     <div>
       <BottomNavigation
-        value={value}
+        value={retrievedValue}
         onChange={handleChange}
         className={classes.root}
       >
