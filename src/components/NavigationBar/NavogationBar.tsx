@@ -10,6 +10,7 @@ import RestaurantIcon from "@material-ui/icons/Restaurant";
 import Brightness4Icon from "@material-ui/icons/Brightness4";
 import { useDispatch } from "react-redux";
 import { changeModeAction } from "../../store/darkMode/actions";
+import { Link } from "react-router-dom";
 
 const useStyles = makeStyles({
   root: {
@@ -42,31 +43,34 @@ export default function LabelBottomNavigation() {
         onChange={handleChange}
         className={classes.root}
       >
-        <BottomNavigationAction
-          onClick={() => (document.location.href = `/`)}
-          label="Home"
-          value="home"
-          icon={<HomeIcon />}
-        />
-        <BottomNavigationAction
-          onClick={() => (document.location.href = `/restaurant`)}
-          label="Restaurant View"
-          value="restaurantview"
-          icon={<RestaurantIcon />}
-        />
-
-        <BottomNavigationAction
-          onClick={() => (document.location.href = `/orders`)}
-          label="Active Orders"
-          value="activeOrders"
-          icon={<EmojiFoodBeverageIcon />}
-        />
-        <BottomNavigationAction
-          onClick={() => (document.location.href = `/menu`)}
-          label="Menu"
-          value="menu"
-          icon={<RestaurantMenuIcon />}
-        />
+        <Link to="/">
+          <BottomNavigationAction
+            label="Home"
+            value="home"
+            icon={<HomeIcon />}
+          />
+        </Link>
+        <Link to="/restaurant">
+          <BottomNavigationAction
+            label="Restaurant View"
+            value="restaurantview"
+            icon={<RestaurantIcon />}
+          />
+        </Link>
+        <Link to="/orders">
+          <BottomNavigationAction
+            label="Active Orders"
+            value="activeOrders"
+            icon={<EmojiFoodBeverageIcon />}
+          />
+        </Link>
+        <Link to="/menu">
+          <BottomNavigationAction
+            label="Menu"
+            value="menu"
+            icon={<RestaurantMenuIcon />}
+          />
+        </Link>
         <BottomNavigationAction
           label="Log Out"
           value="logout"
