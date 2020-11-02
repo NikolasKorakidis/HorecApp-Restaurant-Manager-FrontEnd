@@ -24,12 +24,16 @@ export default function LabelBottomNavigation() {
   const [value, setValue] = React.useState("home");
   localStorage.setItem("value", value);
   const retrievedValue = localStorage.getItem("value");
+  console.log(retrievedValue);
 
   const dispatch = useDispatch();
 
   const handleChange = (event: React.ChangeEvent<{}>, newValue: string) => {
     setValue(newValue);
   };
+
+  // Nav Bar trying to stay active on change, i setted a localstorage for now
+  // it's not working tho, need to find out the reasons.
 
   return (
     <div>
