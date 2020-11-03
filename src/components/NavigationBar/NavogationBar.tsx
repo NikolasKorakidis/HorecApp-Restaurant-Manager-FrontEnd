@@ -10,6 +10,7 @@ import RestaurantIcon from "@material-ui/icons/Restaurant";
 import Brightness4Icon from "@material-ui/icons/Brightness4";
 import { useDispatch } from "react-redux";
 import { changeModeAction } from "../../store/darkMode/actions";
+import { Link } from "react-router-dom";
 
 const useStyles = makeStyles({
   root: {
@@ -22,44 +23,54 @@ const useStyles = makeStyles({
 export default function LabelBottomNavigation() {
   const classes = useStyles();
   const [value, setValue] = React.useState("home");
+  localStorage.setItem("value", value);
+  const retrievedValue = localStorage.getItem("value");
+  console.log(retrievedValue);
+
   const dispatch = useDispatch();
 
   const handleChange = (event: React.ChangeEvent<{}>, newValue: string) => {
     setValue(newValue);
   };
 
+  // Nav Bar trying to stay active on change, i setted a localstorage for now
+  // it's not working tho, need to find out the reasons.
+
   return (
     <div>
       <BottomNavigation
-        value={value}
+        value={retrievedValue}
         onChange={handleChange}
         className={classes.root}
       >
-        <BottomNavigationAction
-          onClick={() => (document.location.href = `/`)}
-          label="Home"
-          value="home"
-          icon={<HomeIcon />}
-        />
-        <BottomNavigationAction
-          onClick={() => (document.location.href = `/restaurant`)}
-          label="Restaurant View"
-          value="restaurantview"
-          icon={<RestaurantIcon />}
-        />
-
-        <BottomNavigationAction
-          onClick={() => (document.location.href = `/orders`)}
-          label="Active Orders"
-          value="activeOrders"
-          icon={<EmojiFoodBeverageIcon />}
-        />
-        <BottomNavigationAction
-          onClick={() => (document.location.href = `/menu`)}
-          label="Menu"
-          value="menu"
-          icon={<RestaurantMenuIcon />}
-        />
+        <Link to="/">
+          <BottomNavigationAction
+            label="Home"
+            value="home"
+            icon={<HomeIcon />}
+          />
+        </Link>
+        <Link to="/restaurant">
+          <BottomNavigationAction
+            label="Restaurant View"
+            value="restaurantview"
+            icon={<RestaurantIcon />}
+          />
+        </Link>
+        <Link to="/orders">
+          <BottomNavigationAction
+            label="Active Orders"
+            value="activeOrders"
+            icon={<EmojiFoodBeverageIcon />}
+          />
+        </Link>
+        <Link to="/menu">
+          <BottomNavigationAction
+            label="Menu"
+            value="menu"
+            icon={<RestaurantMenuIcon />}
+          />
+        </Link>
         <BottomNavigationAction
           label="Log Out"
           value="logout"
