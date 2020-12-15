@@ -11,6 +11,7 @@ import Brightness4Icon from "@material-ui/icons/Brightness4";
 import { useDispatch } from "react-redux";
 import { changeModeAction } from "../../store/darkMode/actions";
 import { Link } from "react-router-dom";
+import "./styles.css";
 
 const useStyles = makeStyles({
   root: {
@@ -37,7 +38,7 @@ export default function LabelBottomNavigation() {
   // it's not working tho, need to find out the reasons.
 
   return (
-    <div>
+    <div className="bottom-navbar">
       <BottomNavigation
         value={retrievedValue}
         onChange={handleChange}
