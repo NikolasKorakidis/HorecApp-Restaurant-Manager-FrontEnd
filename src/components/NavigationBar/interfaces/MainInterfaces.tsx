@@ -31,12 +31,7 @@ export default function MediaCard(props: Props) {
   return (
     <Card className={classes.root}>
       <CardActionArea>
-        <CardMedia
-          className={classes.media}
-          image={image}
-          title={title}
-          onClick={() => (document.location.href = `/${path}`)}
-        />
+        <CardMedia className={classes.media} image={image} title={title} />
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
             {disc}

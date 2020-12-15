@@ -8,6 +8,7 @@ import Typography from "@material-ui/core/Typography";
 import { Order } from "../types/orderTypes";
 import { useDispatch } from "react-redux";
 import { createOrder } from "../store/orders/actions";
+import { Link } from "react-router-dom";
 
 const useStyles = makeStyles({
   root: {
@@ -67,15 +68,18 @@ export default function OutlinedCard(props: Props) {
       </CardContent>
       <CardActions>
         {tableOrders.length > 0 ? (
-          <Button
-            onClick={() => (document.location.href = `/table/${tableId}`)}
-            style={{ width: "70%", margin: "0 auto 1rem" }}
-            variant="contained"
-            color="primary"
-            size="small"
-          >
-            Open Table
-          </Button>
+          <div>
+            <Link to={`/table/${tableId}`} style={{ textDecoration: "none" }}>
+              <Button
+                variant="contained"
+                color="primary"
+                size="small"
+                style={{ width: "180%", margin: "0 auto 1rem" }}
+              >
+                Open Table
+              </Button>
+            </Link>
+          </div>
         ) : (
           <Button
             onClick={() => dispatch(createOrder(tableId))}
