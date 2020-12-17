@@ -36,7 +36,7 @@ export default function Main() {
             disc={"Active Orders"}
           />
         </Link>
-        <Link to="orders" style={{ textDecoration: "none" }}>
+        <Link to="menu" style={{ textDecoration: "none" }}>
           <MainInterfaces
             image={
               "https://image.freepik.com/free-vector/elegant-restaurant-menu_23-2147492923.jpg"
