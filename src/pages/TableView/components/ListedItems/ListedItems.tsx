@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchOrders } from "../../../../store/orders/actions";
 import { selectOrders } from "../../../../store/orders/selectors";
@@ -15,7 +15,6 @@ export default function ListedItems(props: Props) {
   const dispatch = useDispatch();
   const orders = useSelector(selectOrders);
   const tableOrder = orders.find((order) => order.tableId === parseInt(id));
-  console.log("tableorder", tableOrder);
 
   useEffect(() => {
     dispatch(fetchOrders());
