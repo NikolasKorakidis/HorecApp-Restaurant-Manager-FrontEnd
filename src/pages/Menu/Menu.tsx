@@ -11,13 +11,19 @@ export default function Menu() {
     dispatch(fetchCategories());
   }, []);
 
+  console.log(categories);
+
   return (
     <div>
       <h1>Menu</h1>
-      {categories?.map((category) => (
+      <img
+        src="https://www.forketers.com/wp-content/uploads/2017/10/how-design-menu.jpg"
+        alt="menu"
+      />
+      {/* {categories?.map((category) => (
         <div className="menu-main-div">
           <div key={category.id}>
-            <h2>{category.name}</h2>
+            <h2 style={styles.title}>{category.name}</h2>
             <ul>
               {category.items.map((item) => (
                 <div key={item.id}>
@@ -33,7 +39,15 @@ export default function Menu() {
             </ul>
           </div>
         </div>
-      ))}
+      ))} */}
     </div>
   );
 }
+
+const styles = {
+  title: {
+    background: "lightblue",
+    width: "50%",
+    margin: "auto",
+  },
+};
