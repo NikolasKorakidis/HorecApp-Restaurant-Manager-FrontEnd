@@ -15,7 +15,7 @@ export default function ListedItems(props: Props) {
   const dispatch = useDispatch();
   const orders = useSelector(selectOrders);
   const tableOrder = orders.find((order) => order.tableId === parseInt(id));
-  console.log("tableorder", tableOrder);
+  console.log("here i lay",orders)
 
   useEffect(() => {
     dispatch(fetchOrders());
