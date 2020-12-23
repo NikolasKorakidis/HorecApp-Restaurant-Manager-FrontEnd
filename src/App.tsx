@@ -7,6 +7,7 @@ import NavigationBar from "./components/NavigationBar//NavogationBar";
 import UpNavBar from "./components/NavigationBar/UpNavBar";
 import Table from "./pages/TableView/TableView";
 import Menu from "./pages/Menu/Menu";
+import ManagersView from "./pages/ManagersView/index"
 import ActiveOrders from "./pages/ActiveOrders/ActiveOrders";
 import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
 import CssBaseline from "@material-ui/core/CssBaseline";
@@ -36,6 +37,7 @@ function App() {
           <Route strict path="/table/:tableId" component={Table} />
           <Route strict path="/restaurant" component={RestaurantOverview} />
           <Route strict path="/" component={Main} />
+          <Route strict path="/manager" component={ManagersView} />
         </Switch>
         <NavigationBar />
       </ThemeProvider>

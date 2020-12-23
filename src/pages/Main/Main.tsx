@@ -46,6 +46,7 @@ export default function Main() {
             disc={"Menu"}
           />
         </Link>
+        <Link to="manager" style={{ textDecoration: "none" }}>
         <MainInterfaces
           image={
             "https://cdn.thinglink.me/api/image/783748870432620544/1240/10/scaletowidth"
@@ -54,7 +55,7 @@ export default function Main() {
           path={"manager"}
           disc={"Manager's View"}
         />
-
+        </Link>
         <MainInterfaces
           image={
             "https://id10.co.uk/wp-content/uploads/2015/04/web-design-tools.jpg"
