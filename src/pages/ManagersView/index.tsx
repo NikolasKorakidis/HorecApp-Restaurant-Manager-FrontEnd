@@ -17,7 +17,7 @@ export default function index() {
 
 const styles = {
   main: {
-    display: "flex",
+    // display: "flex",
     margin: "auto",
   },
 };
