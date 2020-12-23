@@ -32,12 +32,12 @@ function App() {
         <CssBaseline />
         <UpNavBar />
         <Switch>
+          <Route strict path="/manager" component={ManagersView} />
           <Route strict path="/orders" component={ActiveOrders} />
           <Route strict path="/menu" component={Menu} />
           <Route strict path="/table/:tableId" component={Table} />
           <Route strict path="/restaurant" component={RestaurantOverview} />
           <Route strict path="/" component={Main} />
-          <Route strict path="/manager" component={ManagersView} />
         </Switch>
         <NavigationBar />
       </ThemeProvider>
