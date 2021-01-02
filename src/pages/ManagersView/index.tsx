@@ -6,7 +6,18 @@ export default function index() {
     <div className="main-manager-div">
       <div className="earnings">
         <h1 className="header">Daily Report</h1>
-        <p>Daily Total: 300 €</p>
+        <p>Daily Total: 3056 €</p>
+        <p>Items Sold: 798</p>
+        <p>Tables Served: 44</p>
+        <p>Open Orders: 2</p>
+        <p>Open Orders amount: 156 €</p>
+        <button
+          onClick={() =>
+            alert("Daily Report is Saved and Send to : manager@horecapp.com")
+          }
+        >
+          Save and Send
+        </button>
       </div>
       <div className="orders">
         <h1 className="header">Daily Consumption</h1>
