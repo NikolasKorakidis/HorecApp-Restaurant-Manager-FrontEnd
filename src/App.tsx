@@ -16,8 +16,9 @@ import { selectMode } from "./store/darkMode/selector";
 import Intro from "./pages/Intro/index";
 
 function App() {
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   const mode = useSelector(selectMode);
+  // setTimeout(() => setLoading(false), 6000);
 
   const theme = React.useMemo(
     () =>
@@ -28,18 +29,19 @@ function App() {
       }),
     [mode]
   );
+
   return (
     <div className="App">
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <UpNavBar />
         <Switch>
-          <Route strict path="/" component={loading ? Main : Intro} />
           <Route strict path="/manager" component={ManagersView} />
           <Route strict path="/orders" component={ActiveOrders} />
           <Route strict path="/menu" component={Menu} />
           <Route strict path="/table/:tableId" component={Table} />
           <Route strict path="/restaurant" component={RestaurantOverview} />
+          <Route strict path="/" component={loading ? Intro : Main} />
         </Switch>
         <NavigationBar />
       </ThemeProvider>
