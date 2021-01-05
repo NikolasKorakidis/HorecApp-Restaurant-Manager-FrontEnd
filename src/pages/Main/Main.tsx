@@ -13,7 +13,7 @@ export default function Main() {
   }, []);
 
   return (
-    <div>
+    <div className="Main-main-div">
       <h1>RestaurApp</h1>
       <div className="buttons">
         <Link to="/restaurant" style={{ textDecoration: "none" }}>
@@ -47,14 +47,14 @@ export default function Main() {
           />
         </Link>
         <Link to="manager" style={{ textDecoration: "none" }}>
-        <MainInterfaces
-          image={
-            "https://cdn.thinglink.me/api/image/783748870432620544/1240/10/scaletowidth"
-          }
-          title={"manager"}
-          path={"manager"}
-          disc={"Manager's View"}
-        />
+          <MainInterfaces
+            image={
+              "https://cdn.thinglink.me/api/image/783748870432620544/1240/10/scaletowidth"
+            }
+            title={"manager"}
+            path={"manager"}
+            disc={"Manager's View"}
+          />
         </Link>
         <MainInterfaces
           image={
