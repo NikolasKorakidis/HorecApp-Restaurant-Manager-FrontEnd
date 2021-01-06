@@ -14,7 +14,7 @@ export default function Main() {
 
   return (
     <div className="Main-main-div">
-      <h1>RestaurApp</h1>
+      <h1>Restaurant</h1>
       <div className="buttons">
         <Link to="/restaurant" style={{ textDecoration: "none" }}>
           <MainInterfaces
