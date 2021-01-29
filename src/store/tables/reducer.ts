@@ -8,6 +8,8 @@ export default (state = initialState, action: TableActionTypes) => {
     case fetched_tables:
       return [...action.payload];
     // Study this one
+
+    // Checking notes on that
     case update_table:
       const tableId = action.payload.tableId;
       const updatedTables = state.map((t) => {
